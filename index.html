@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тетрис</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-info">
+            <h1>Тетрис</h1>
+            <div class="score-container">
+                <div class="score-item">
+                    <span class="label">Счёт:</span>
+                    <span id="score">0</span>
+                </div>
+                <div class="score-item">
+                    <span class="label">Линий:</span>
+                    <span id="lines">0</span>
+                </div>
+                <div class="score-item">
+                    <span class="label">Уровень:</span>
+                    <span id="level">1</span>
+                </div>
+            </div>
+            <div class="next-piece-container">
+                <h3>Следующая фигура:</h3>
+                <canvas id="nextCanvas" width="120" height="120"></canvas>
+            </div>
+            <div class="controls">
+                <h3>Управление:</h3>
+                <ul>
+                    <li><strong>←→</strong> - движение</li>
+                    <li><strong>↑</strong> - поворот</li>
+                    <li><strong>↓</strong> - ускорение</li>
+                    <li><strong>Пробел</strong> - пауза</li>
+                </ul>
+            </div>
+            <button id="startBtn" class="btn">Начать игру</button>
+        </div>
+        <div class="canvas-container">
+            <canvas id="gameCanvas" width="300" height="600"></canvas>
+            <div id="gameOver" class="game-over hidden">
+                <h2>Игра окончена!</h2>
+                <p>Счёт: <span id="finalScore">0</span></p>
+                <button id="restartBtn" class="btn">Начать заново</button>
+            </div>
+        </div>
+    </div>
+    <script src="tetris.js"></script>
+</body>
+</html>
